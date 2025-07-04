@@ -8,7 +8,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 })
 export class CancionService {
 
-  baseUri: string = 'http://localhost:4000/api';
+  baseUri = 'https://backend-94q3.onrender.com/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
