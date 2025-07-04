@@ -1,0 +1,81 @@
+<div class="container" style="margin: 20px;">
+  <h2>Agregar Canción</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card-body">
+
+        <form [formGroup]="cancionForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" formControlName="titulo" required />
+            @if (enviado && myForm['titulo'].errors?.['required']) {
+              <div style="color: red;">Este campo es obligatorio</div>
+            }
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <label for="genero">Género</label>
+            <select class="custom-select form-control"
+                    (change)="actualizarGenero($event)"
+                    formControlName="genero">
+              <option value="">Seleccionar un género...</option>
+              @for (genero of cancionGenero; track genero) {
+                <option [value]="genero">{{ genero }}</option>
+              }
+            </select>
+            @if (enviado && myForm['genero'].errors?.['required']) {
+              <div style="color: red;">Debes seleccionar un género</div>
+            }
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <label for="artista">Artista</label>
+            <input type="text" class="form-control" formControlName="artista" required />
+            @if (enviado && myForm['artista'].errors?.['required']) {
+              <div style="color: red;">Este campo es obligatorio</div>
+            }
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <label for="album">Álbum</label>
+            <input type="text" class="form-control" formControlName="album" required />
+            @if (enviado && myForm['album'].errors?.['required']) {
+              <div style="color: red;">Este campo es obligatorio</div>
+            }
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <label for="anio">Año</label>
+            <input type="number" class="form-control" formControlName="anio" required />
+            @if (enviado && myForm['anio'].errors?.['required']) {
+              <div style="color: red;">Este campo es obligatorio</div>
+            }
+            @if (enviado && myForm['anio'].errors?.['pattern']) {
+              <div style="color: red;">Solo se permiten años de 4 dígitos (Ejemplo: 1989)</div>
+            }
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Agregar canción
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

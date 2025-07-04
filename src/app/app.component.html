@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg custom-navbar px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="/">🎵 Music App 🎵 </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/listar-cancion" routerLinkActive="active">Lista de Canciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/agregar-cancion" routerLinkActive="active">Agregar Canción</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container my-4">
+  <h3 class="gallery-title text-center">🎤 Top Albums (Estético)</h3>
+
+  <div id="albumCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Primer slide con clase active -->
+      <div class="carousel-item active">
+        <img src="assets/img/die.jpg" class="d-block w-100 gallery-img" alt="die">
+      </div>
+
+      <!-- Resto de las imágenes -->
+      <div class="carousel-item">
+        <img src="assets/img/black.jpg" class="d-block w-100 gallery-img" alt="black">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/ye.jpg" class="d-block w-100 gallery-img" alt="ye">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/bet.jpg" class="d-block w-100 gallery-img" alt="bet">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/dp.jpg" class="d-block w-100 gallery-img" alt="dp">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/red.jpg" class="d-block w-100 gallery-img" alt="red">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/gen.jpeg" class="d-block w-100 gallery-img" alt="gen">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/rock.jpg" class="d-block w-100 gallery-img" alt="rock">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/ct.png" class="d-block w-100 gallery-img" alt="ct">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/em.jpeg" class="d-block w-100 gallery-img" alt="em">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/numb.jpeg" class="d-block w-100 gallery-img" alt="numb">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/lb.png" class="d-block w-100 gallery-img" alt="lb">
+      </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#albumCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#albumCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

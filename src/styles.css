@@ -1,0 +1,186 @@
+/* Fondo general */
+body {
+  background-color: #0e0e0e;
+  color: #fce4ec;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+/* Tabla personalizada */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ff69b4;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  border: 1px solid #ff69b4;
+  text-align: center;
+}
+
+.custom-table thead {
+  background-color: #1f1f1f;
+  color: #ff69b4;
+}
+
+.custom-table tbody tr {
+  background-color: #151515;
+  color: #fce4ec;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Botones */
+.btn-editar {
+  background-color: #ffca28;
+  color: #000;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-editar:hover {
+  background-color: #ffc107;
+}
+
+.btn-eliminar {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-eliminar:hover {
+  background-color: #c62828;
+}
+
+/* === NAVBAR ROSA CON TEXTO NEGRO === */
+.custom-navbar {
+  background-color: #ff69b4; /* rosa fuerte */
+  border-bottom: 3px solid #000; /* línea negra abajo */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #000 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #fff !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 4px 8px;
+  transition: background-color 0.3s;
+}
+
+.navbar-toggler {
+  border-color: #000;
+}
+
+.image-gallery {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.3);
+}
+
+.gallery-title {
+  color: #ff69b4;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid #ff69b4;
+  border-radius: 12px
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; 
+  width: 2rem;
+  height: 2rem;
+  border: solid #ff69b4;
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon {
+  transform: rotate(-45deg);
+}
+
+/* Opcional: cambia el fondo detrás del ícono */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+  opacity: 0.9;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 105, 180, 0.1);
+  cursor: pointer;
+}
+
+.text-pink {
+  color: #ff69b4;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.custom-table {
+  color: #fce4ec;
+  background-color: #121212;
+  border-color: #ff69b4;
+}
+
+.custom-table thead {
+  background-color: #1f1f1f;
+  color: #ff69b4;
+}
+
+.custom-table tbody tr:hover {
+  background-color: rgba(255, 105, 180, 0.05);
+  transition: background-color 0.3s;
+}
+
+.btn-editar {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-eliminar {
+  background-color: #e53935;
+  color: white;
+  font-weight: bold;
+  border: none;
+}

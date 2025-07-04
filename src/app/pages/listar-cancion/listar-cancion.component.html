@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="table-wrapper container mt-4">
+    <h2 class="text-center text-pink">Lista de Canciones</h2>
+
+    @if(canciones.length <= 0) {
+      <p class="text-center">
+        No hay canciones registradas
+      </p>
+    } @else {
+      <table class="table custom-table">
+        <thead class="table-header">
+          <tr>
+            <th>ID Cancion</th>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Artista</th>
+            <th>Álbum</th>
+            <th>Año</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cancion of canciones; track cancion._id; let i = $index) {
+            <tr>
+              <td>{{ cancion._id }}</td>
+              <td>{{ cancion.titulo }}</td>
+              <td>{{ cancion.genero }}</td>
+              <td>{{ cancion.artista }}</td>
+              <td>{{ cancion.album }}</td>
+              <td>{{ cancion.anio }}</td>
+              <td>
+                <a [routerLink]="['/editar-cancion', cancion._id]" class="btn btn-editar btn-sm">
+                  Editar
+                </a>
+              </td>
+              <td>
+                <a (click)="eliminarCancion(cancion, i)" class="btn btn-eliminar btn-sm">
+                  Eliminar
+                </a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>
